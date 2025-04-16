@@ -21,8 +21,8 @@ To run this project locally, you'll need:
 1. Clone the repository to your local machine:
 
 ```bash
-git clone https://github.com/your-username/your-repository-name.git
-cd your-repository-name
+git clone https://github.com/lucasbravo00/Task_manager_Django.git
+cd Task_manager_Django
 ```
 
 2. Create a virtual environment (optional but recommended):
