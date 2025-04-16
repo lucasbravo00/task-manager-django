@@ -1,0 +1,19 @@
+{% extends 'base/main.html' %}
+{% block content %}
+
+<!-- Top bar with heading -->
+<div class="top-bar">
+    <h1>Login</h1>
+</div>
+
+<!-- Card body containing the login form -->
+<div class="card-body">
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}  <!-- Render form fields as paragraph elements -->
+        <input class='button' type="submit" value="Login">
+    </form>
+    <p>Don't have an account? <a href="{% url 'register' %}">Sign up</a></p>
+</div>
+
+{% endblock content %}

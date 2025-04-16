@@ -1,0 +1,22 @@
+{% extends 'base/main.html' %}
+{% block content %}
+
+<!-- Top bar with back button -->
+<div class="top-bar">
+    <a href="{% url 'tasks' %}">&#x1F860; Back</a>
+</div>
+
+<!-- Card body for editing the task -->
+<div class="card-body">
+    <h1>Edit Task</h1>
+
+    <!-- Form to edit the task -->
+    <form method="post" action="">
+        {% csrf_token %}
+        {{ form.as_p }}  <!-- Render form fields as paragraph elements -->
+        <input class='button' type="submit" value="Submit">
+    </form>
+
+</div>
+
+{% endblock content %}

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pending Tasks List</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <style>
+        /* Basic styling for the body */
+        body {
+        background-color: #dadd8e; /* Background color */
+        font-family: 'Inter', sans-serif; /* Font family */
+        padding-top: 80px; /* Padding to push content down */
+        }
+
+        /* Container for the main content */
+        .container {
+            max-width: 550px;
+            margin: auto;
+            padding: 20px 30px;
+            background-color: #e9ec9b;
+            box-shadow: 2px 2px 13px 4px rgba(0,0,0,0.21); /* Shadow effect */
+        }
+
+        /* Header text styles */
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Styling for the top bar */
+        .top-bar {
+            background: linear-gradient(90deg, #f3f2c2 0%, #f1f0ab 50%, #eae772 100%);
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-sizing: border-box;
+            margin: -20px -30px 30px -30px;
+        }
+
+        /* Styling for links in the top bar */
+        .top-bar a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        /* Task wrapper styling */
+        .task-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            background-color: #e9ec9b;
+            border-top: 1px solid rgb(150, 150, 150); /* Border between tasks */
+        }
+
+        /* Remove top border for the first task */
+        .task-items-wrapper > .task-wrapper:first-child {
+            border-top: none;
+        }
+
+        /* Styling for the task title */
+        .task-title {
+            display: flex;
+        }
+
+        /* Styling for task title links */
+        .task-title a {
+            text-decoration: none;
+            color: #000;
+            margin-left: 10px;
+        }
+
+        /* Icon for completed tasks */
+        .completed-task-icon {
+            height: 20px;
+            width: 20px;
+            background-color: #a8d8a0;
+            border-radius: 50px;
+        }
+
+        /* Icon for incomplete tasks */
+        .incomplete-task-icon {
+            height: 20px;
+            width: 20px;
+            background-color: #f2a0a0;
+            border-radius: 50px;
+        }
+
+        /* Styling for the delete link */
+        .delete-link {
+            text-decoration: none;
+            font-weight: 900;
+            color: #EA4220;
+            font-size: 20px;
+            line-height: 0;
+        }
+
+        /* Wrapper for add and search section */
+        #add-search-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            margin-top: -30px;
+            margin-left: -15px;
+        }
+
+        /* Add task link styling */
+        #add-link {
+            text-decoration: none;
+            font-size: 30px;
+            color: #2bda16;
+            text-shadow: 1px 1px #31b905;
+        }
+
+        /* Styling for input fields */
+        input[type=text],
+        input[type=password],
+        textarea {
+            width: 90%;
+            padding: 10px;
+            border: 1px solid #bcc61f;
+            border-radius: 4px;
+        }
+
+        /* Label styling */
+        label {
+            display: block;
+            padding-top: 10px !important;
+        }
+
+        /* Button styling */
+        .button {
+            background-color: #FAFAFA;
+            color: #000000;
+            padding: 10px 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Main content container -->
+    <div class="container">
+        {% block content %}
+        {% endblock content %}
+    </div>
+</body>
+</html>
